@@ -1,0 +1,7 @@
+[package]
+authors = ["cyqsimon"]
+description = "fp (FilterPath) is the filter equivalent for the Unix test util."
+edition = "2024"
+name = "fp"
+rust-version = "1.85.0"
+version = "0.1.0"
