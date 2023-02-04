@@ -5,3 +5,8 @@ edition = "2024"
 name = "fp"
 rust-version = "1.85.0"
 version = "0.1.0"
+
+[dependencies]
+camino = "1.2.2"
+clap = { version = "4.6.0", features = ["cargo", "derive", "unicode"] }
+thiserror = "2.0.18"
