@@ -1,0 +1,6 @@
+[package]
+authors = ["cyqsimon"]
+description = "fp (FilterPath) is the filter equivalent for the Unix test util."
+edition = "2021"
+name = "fp"
+version = "0.1.0"
