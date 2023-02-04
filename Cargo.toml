@@ -12,3 +12,7 @@ displaydoc = "0.2.3"
 log = "0.4.17"
 simplelog = "0.12.0"
 thiserror = "1.0.38"
+
+[build-dependencies]
+clap = {version = "4.1.4", features = ["cargo", "derive", "unicode"]}
+clap_complete = "4.1.1"
