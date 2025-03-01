@@ -12,6 +12,8 @@ mod error;
 
 fn main() -> Result<(), FPError> {
     let Cli {
+        op_mode,
+
         is_block,
         is_char,
         is_dir,
