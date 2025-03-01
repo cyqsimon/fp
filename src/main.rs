@@ -9,6 +9,7 @@ use crate::{cli::Cli, error::FPError};
 
 mod cli;
 mod error;
+mod filters;
 
 fn main() -> Result<(), FPError> {
     let Cli {
