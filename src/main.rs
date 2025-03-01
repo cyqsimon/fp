@@ -6,6 +6,7 @@ use clap::Parser;
 use crate::{cli::Cli, error::FPError};
 
 mod cli;
+mod cli_ext;
 mod error;
 
 fn main() -> Result<(), FPError> {

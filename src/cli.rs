@@ -1,4 +1,4 @@
-use clap::{ArgAction, Parser};
+use clap::{ArgAction, Parser, ValueEnum};
 
 #[derive(Clone, Debug, Parser)]
 #[command(
@@ -10,6 +10,10 @@ use clap::{ArgAction, Parser};
     arg_required_else_help = true
 )]
 pub struct Cli {
+    /// Set the binary operation used when chaining filters.
+    #[arg(long = "mode", value_enum, default_value_t)]
+    pub op_mode: OpMode,
+
     // The filters applied to the input paths.
     // See https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html
     /// Show only block special files.
@@ -66,4 +70,27 @@ pub struct Cli {
     /// Print version.
     #[arg(short = 'v', long = "version", action = ArgAction::Version)]
     pub show_version: (),
+}
+
+/// The binary operation used to chain multiple filters.
+#[derive(Copy, Clone, Debug, Default, ValueEnum)]
+pub enum OpMode {
+    /// Path matches if it matches all of the specified filters. Default.
+    #[default]
+    And,
+
+    /// Path matches if it does not match any one of the specified filters.
+    Nand,
+
+    /// Path matches if it matches any one of the specified filters.
+    Or,
+
+    /// Path matches if it matches none of the specified filters.
+    Nor,
+
+    /// Path matches if an odd number of filters match.
+    Xor,
+
+    /// Path matches if an even number of filters match.
+    Xnor,
 }
