@@ -2,10 +2,6 @@
 
 fp (FilterPath) is the filter equivalent for the Unix `test` util.
 
-## Work in progress
-
-This program is still in active development.
-
 ## Quick start
 
 ```sh
