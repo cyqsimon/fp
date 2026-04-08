@@ -2,9 +2,15 @@
 authors = ["cyqsimon"]
 description = "fp (FilterPath) is the filter equivalent for the Unix test util."
 edition = "2024"
-name = "fp"
+license-file = "LICENSE"
+name = "filterpath"
+repository = "https://github.com/cyqsimon/fp"
 rust-version = "1.85.0"
 version = "0.1.0"
+
+[[bin]]
+name = "fp"
+path = "src/main.rs"
 
 [dependencies]
 camino = "1.2.2"
