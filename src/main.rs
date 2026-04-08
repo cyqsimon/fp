@@ -11,6 +11,9 @@ mod error;
 mod filters;
 
 fn main() -> Result<(), FPError> {
+    #[cfg(not(target_family = "unix"))]
+    compile_error!("fp is only written for Unix-like OSes for now. PRs welcomed.");
+
     let cli_opts = Cli::parse();
     let filters = cli_opts.to_filters();
 
