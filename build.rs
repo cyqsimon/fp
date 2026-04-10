@@ -1,4 +1,4 @@
-use std::{env, fs, io, path::PathBuf};
+use std::{env, fs, io};
 
 use clap::CommandFactory;
 use clap_complete::{generate_to, shells::Shell::*};

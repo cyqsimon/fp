@@ -1,3 +1,5 @@
+use std::path::PathBuf;
+
 use clap::{ArgAction, Parser, ValueEnum};
 
 #[derive(Clone, Debug, Parser)]
@@ -13,6 +15,11 @@ pub struct Cli {
     /// Set the binary operation used when chaining filters.
     #[arg(long = "mode", value_enum, default_value_t)]
     pub op_mode: OpMode,
+
+    /// Resolve relative paths against this directory
+    /// instead of the current working directory.
+    #[arg(long = "base-dir", value_name = "DIR")]
+    pub base_dir: Option<PathBuf>,
 
     // The filters applied to the input paths.
     // See https://pubs.opengroup.org/onlinepubs/9699919799/utilities/test.html
