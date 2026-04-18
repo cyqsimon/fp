@@ -86,7 +86,7 @@ pub enum OpMode {
     #[default]
     And,
 
-    /// Path matches if it does not match any one of the specified filters.
+    /// Path matches if it does not match all of the specified filters.
     Nand,
 
     /// Path matches if it matches any one of the specified filters.
