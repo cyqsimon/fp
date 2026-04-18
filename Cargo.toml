@@ -14,11 +14,11 @@ path = "src/main.rs"
 
 [dependencies]
 camino = "1.2.2"
-clap = { version = "4.6.0", features = ["cargo", "derive", "unicode"] }
-libc = "0.2.184"
+clap = { version = "4.6.1", features = ["cargo", "derive", "unicode"] }
+libc = "0.2.185"
 pastey = "0.2.1"
 thiserror = "2.0.18"
 
 [build-dependencies]
-clap = { version = "4.6.0", features = ["cargo", "derive", "unicode"] }
-clap_complete = "4.6.0"
+clap = { version = "4.6.1", features = ["cargo", "derive", "unicode"] }
+clap_complete = "4.6.2"
